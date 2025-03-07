@@ -32,7 +32,6 @@ export default async function Nav() {
                 width={80}
                 height={40}  
               />
-              Anhaa
             </LocalizedClientLink>
           </div>
 
