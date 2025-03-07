@@ -3,6 +3,7 @@ import { Metadata } from "next"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import Hero from "@modules/home/components/hero"
 import WhyChooseUs from "@modules/home/components/why-choose-us"
+import HeroSlider from "@modules/home/components/slider"
 import { listCollections } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
 
@@ -31,6 +32,7 @@ export default async function Home(props: {
 
   return (
     <>
+      <HeroSlider />
       <Hero />
       <WhyChooseUs />
       <div className="py-12">

@@ -1,5 +1,6 @@
 import { Github } from "@medusajs/icons"
 import { Button, Heading } from "@medusajs/ui"
+import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import Image from "next/image"
 
 const imageMap = {
@@ -80,18 +81,25 @@ const Hero = () => {
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {Object.keys(imageMap).map((item) => (
-                <div
+                <LocalizedClientLink
+                  href={`/categories/${item}`}
+                  data-testid="categories-link"
                   key={item}
-                  className="flex flex-col items-center justify-center p-4 bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition h-60"
                 >
-                  <Image
-                    src={imageMap[item as keyof typeof imageMap]}
-                    alt={item}
-                    width={80}
-                    height={80}
-                  />
-                  <p className="mt-2 text-center text-gray-800 font-medium">{item}</p>
-                </div>
+                  <div
+                    key={item}
+                    className="flex flex-col items-center justify-center p-4 bg-white border border-gray-200 rounded shadow-sm hover:shadow-md transition h-60"
+                  >
+                  
+                    <Image
+                      src={imageMap[item as keyof typeof imageMap]}
+                      alt={item}
+                      width={80}
+                      height={80}
+                    />
+                    <p className="mt-2 text-center text-gray-800 font-medium">{item}</p>
+                  </div>
+                </LocalizedClientLink>
               ))}
             </div>
             <p className="mt-6 text-center text-gray-700 text-l">
