@@ -29,8 +29,8 @@ export default async function Nav() {
               <Image
                 src={'/logo.svg'}
                 alt={'Anhaa logo'}
-                width={80}
-                height={40}  
+                width={160}
+                height={130}  
               />
             </LocalizedClientLink>
           </div>
