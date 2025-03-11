@@ -225,7 +225,7 @@ export default async function Footer() {
               className="txt-compact-xlarge-plus uppercase hover:text-gray-200"
             >
               <Image
-                src={"/logo.svg"}
+                src={"/dark-logo.svg"}
                 alt={"Anhaa logo"}
                 width={160}
                 height={40}
